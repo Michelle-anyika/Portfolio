@@ -31,30 +31,12 @@ allDetails.forEach((detail) => {
   });
 });
 
-// Contact form submission
+// Contact form alert
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', async function (e) {
+  contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    
-    const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value
-    };
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      
-      const result = await response.json();
-      alert(result.message);
-      if (result.success) contactForm.reset();
-    } catch (error) {
-      alert('Error sending message. Please try again.');
-    }
+    alert('Thank you for your message! I will get back to you soon.');
+    contactForm.reset();
   });
 }
