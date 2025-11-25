@@ -1,22 +1,7 @@
 {
-  "version": 2,
   "functions": {
-    "server.js": {
+    "api/contact.js": {
       "runtime": "nodejs18.x"
     }
-  },
-  "routes": [
-    {
-      "src": "/contact",
-      "dest": "/server.js"
-    },
-    {
-      "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico|svg))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/index.html"
-    }
-  ]
+  }
 }
